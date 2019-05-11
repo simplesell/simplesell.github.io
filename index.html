@@ -1,0 +1,61 @@
+<html>
+<title>
+simplesell
+</title>
+
+<script>
+  
+
+//alert(query)
+//var params = {};
+//	var parser = document.createElement('a');
+//	parser.href = url;
+//var urll = window.location.href);
+//alert(urll)
+//var blah = urll.split('?')
+//alert(blah[1])
+//var vars = blah[1].split('&')
+
+function fetch()
+{
+	//var parser = document.createElement('a');
+	//parser.href = url;
+	//var query = parser.search.substring(1);
+	var urll = window.location.href
+	var vars = urll.split('?')
+	var params = vars[1].split('&')
+	var store = params[0].split('=')
+	var offer = params[1].split('=')
+
+	//document.getElementById('what').innerHTML = offer[1]//vars[1];//urll; //"hi udit";
+	//document.getElementById('coupon').src = 'heart.png';
+
+	if(offer[1] == 1)
+		{
+		document.getElementById('what').innerHTML = "offer1"//offer[1]//vars[1];//urll; //"hi udit";
+		document.getElementById('coupon').src = 'mojo.png';
+		}
+	else if(offer[1] == 2)
+		{
+		document.getElementById('what').innerHTML = "offer2"//offer[1]//vars[1];//urll; //"hi udit";
+		document.getElementById('coupon').src = 'box8.png';
+		}
+
+
+}
+</script>
+
+	
+<body onload="fetch()">
+simplesell
+
+<div id="what">
+</div>
+
+<img id="coupon" height="200" width="800"> 
+  
+</body>
+
+</html>
+
+
